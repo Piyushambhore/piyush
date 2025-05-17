@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Message for You 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      width: 100%;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      text-align: center;
+    }
+
+    .flip-card-front h1 {
+      font-size: 28px;
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+
+    .flip-card-front p {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .flip-card-back {
+      transform: rotateY(180deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flip-card-back img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .heart {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      color: #e91e63;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .back-btn {
+      margin-top: 25px;
+      padding: 10px 20px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #ff4081;
+    }
+
+    @media (max-width: 600px) {
+      .flip-card-front h1 {
+        font-size: 22px;
+      }
+
+      .flip-card-front p {
+        font-size: 16px;
+      }
+
+      .heart {
+        font-size: 20px;
+      }
+
+      .flip-card-back img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <div class="heart">❤️</div>
+        <h1>For You, My Angry Cutie 💌</h1>
+        <p>
+          I know you're upset, and I respect your feelings... but I just wanted you to know that you mean the world to me.  
+          <br><br>
+          I'm sorry for whatever made you sad. I miss your smile, your silly jokes, and your warmth.  
+          <br><br>
+          Please forgive me and let’s start fresh. Because honestly, life without your smile isn’t the same.  
+          <br><br>
+          I'm waiting… patiently, lovingly… just for you. 💖
+          <br><br>
+          Sojaaaaaaaaaaaa Parieeeeeee
+        </p>
+        <button class="back-btn">⬅ Back</button>
+      </div>
+      <div class="flip-card-back">
+        <img src="/assets/Screenshot 2025-05-17 141856.png" alt="Your Friend" />
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
